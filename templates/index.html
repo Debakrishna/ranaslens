@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Through Rana's Lens - Home</title>
+
+    <!-- REMIXICON CDN LINK -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+
+    <!-- bootstrap CDN link -->
+    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <!-- CUSTOM CSS FILE -->
+    <link rel="stylesheet" href="static/styles/style.css">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,500;1,500&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="loading_screen">
+          <lottie-player src="https://lottie.host/a538c93b-7912-4d1d-9c54-10e98d6df172/xD4VBErGal.json" background="#ffffff" speed="1" style="width: 300px; height: 300px" loop autoplay direction="1" mode="normal"></lottie-player>
+    </div>
+    <div class="main_body">
+        <header class="hero_container">
+            <img src="/static/assests/images/Hero_image.webp" class="hero_image" alt="">
+            <!-- Navigation Area -->
+            {% include 'base/navbar.html' %}
+            <!-- Navigation Area End -->
+            <div class="hero_text_container">
+                <h1 class="hero_title_text">Capture <br>Your Moments <br> Through Rana's Lens</h1>
+                <p class="hero_body_text">Through Rana's Lens photography and video production company specialize in fashion, weddings, concerts & portraits. Our aim is to partner with clients throughout the most meaningful stages of their life and to capture theses moments for reflection for years to come.</p>
+            </div>
+        </header>
+    
+        <!-- MAIN BODY AREA -->
+        <main class="main">
+            <section class="area about_section section" id="section--1">
+                <div class="about_section_image_area">
+                    <img class="founder_image" src="static/assests/images/founder_img.webp" alt="">
+                </div>
+                <div class="about_section_info_area">
+                    <p class="about_section_sub_heading sub_title">
+                        About Us
+                    </p>
+                    <h1 class="about_section_title">
+                        I'm Rana Medhi founder of Through Rana's Lens.
+                    </h1>
+                    <p class="about_section_desc">
+                        Rana Medhi founded Through Rana's Lens back in 2017 when he was in school in order to a provide premium photography service to artists, models and couples throughout the biggest milestone in their life.<br> The high quality imagery is paired with a warm and friendly environment that is guaranteed to the best out of each person in front of the camera.Together Through Rana's Lens crew offer a top of the range all-rounded service for every clients who walks through the door.
+                    </p>
+                    <a href="{% url 'about' %}" class="about_cta_btn btn">
+                        Know More
+                    </a>
+                </div>
+            </section>
+    
+            <section class="area counter_section section" id="section--2">
+                <div class="counter">
+                    <h1 class="counter_text">10+</h1>
+                    <div class="line"></div>
+                    <p class="count_sub_text">Years of experience</p>
+                </div>
+                <div class="counter">
+                    <h1 class="counter_text">10K+</h1>
+                    <div class="line"></div>
+                    <p class="count_sub_text">Project Completed</p>
+                </div>
+                <div class="counter">
+                    <h1 class="counter_text">80K+</h1>
+                    <div class="line"></div>
+                    <p class="count_sub_text">World Wide Clients</p>
+                </div>
+                <div class="counter">
+                    <h1 class="counter_text" data-number="600">600+</h1>
+                    <div class="line"></div>
+                    <p class="count_sub_text">Positive Review</p>
+                </div>
+            </section>
+    
+            <section class="area services_section" id="section--3">
+                <div class="service_section_info">
+                    <p class="service_section_sub_title sub_title">
+                        Our Services
+                    </p>
+                    <h1 class="service_section_title">
+                        Make your moments memorable <br> with our quality services
+                    </h1>
+                </div>
+                <div class="services_container">
+                    <div class="card card_wedding_service" id="wedding_service">
+                        <img src="/static/assests/images/wedding1.webp" alt="" class="card_image">
+                        
+                        <div class="service_count">
+                            <p class="service_number">01</p>
+                        </div>
+                        <div class="card_service_info_area">
+                            <h1 class="card_title wedding_card_title">
+                                Wedding
+                            </h1>
+                            <p class="card_desc wedding_card_desc">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, tenetur?
+                            </p>
+                            <!-- <div class="card_btn">
+                                <a href="#" class="btn">Know more <i class="ri-arrow-right-up-line"></i></a>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="card card_travel_service" id="travel_service">
+                        <img src="/static/assests/images/travel1.webp" alt="" class="card_image">
+                        
+                        <div class="service_count">
+                            <p class="service_number">02</p>
+                        </div>
+                        <div class="card_service_info_area">
+                            <h1 class="card_title wedding_card_title">
+                                Travel
+                            </h1>
+                            <p class="card_desc wedding_card_desc">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, tenetur?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card card_concert_service" id="concert_service">
+                        <img src="/static/assests/images/concert1.webp" alt="" class="card_image">
+                        
+                        <div class="service_count">
+                            <p class="service_number">03</p>
+                        </div>
+                        <div class="card_service_info_area">
+                            <h1 class="card_title wedding_card_title">
+                                Concert
+                            </h1>
+                            <p class="card_desc wedding_card_desc">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, tenetur?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card card_portrait_service" id="portrait_service">
+                        <img src="/static/assests/images/portrait1.webp" alt="" class="card_image">
+                        
+                        <div class="service_count">
+                            <p class="service_number">04</p>
+                        </div>
+                        <div class="card_service_info_area">
+                            <h1 class="card_title wedding_card_title">
+                                Portrait
+                            </h1>
+                            <p class="card_desc wedding_card_desc">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, tenetur?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card card_fashion_service" id="fashion_service">
+                        <img src="/static/assests/images/fashion1.webp" alt="" class="card_image">
+                        
+                        <div class="service_count">
+                            <p class="service_number">05</p>
+                        </div>
+                        <div class="card_service_info_area">
+                            <h1 class="card_title wedding_card_title">
+                                Fashion
+                            </h1>
+                            <p class="card_desc wedding_card_desc">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, tenetur?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card card_product_service" id="product_service">
+                        <img src="/static/assests/images/product1.webp" alt="" class="card_image">
+                        
+                        <div class="service_count">
+                            <p class="service_number">06</p>
+                        </div>
+                        <div class="card_service_info_area">
+                            <h1 class="card_title wedding_card_title">
+                                Product
+                            </h1>
+                            <p class="card_desc wedding_card_desc">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, tenetur?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="area portfolio_section section" id="section--4">
+                <div class="portfolio_text_container">
+                    <p class="portfolio_section_sub_title sub_title">
+                        Portfolio
+                    </p>
+                    <div class="portfolio_info_area">
+                        <div class="portfolio_info_area_left">
+                        <h1 class="portfolio_section_title">
+                            Some great moments <br> we captured
+                        </h1>
+                        </div>
+                        <div class="portfolio_info_area_right">
+                            <p class="portfolio_section_desc">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dolorem saepe aspernatur reprehenderit, blanditiis error.
+                            </p>
+                            <a href="#" class="portfolio_section_btn btn">
+                                view more
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio_img_area">
+                    <div class="portfolio_img_card grid_col_span_2">
+                        <img class="portfolio_img" id="wedding" src="/static/assests/images/wedding1.webp" alt="">
+                    </div>
+    
+                    <div class="portfolio_img_card grid_col_span_2">
+                        <img class="portfolio_img" src="/static/assests/images/concert1.webp" id="concert" alt="">
+                    </div>
+                    <div class="portfolio_img_card ">
+                        <img class="portfolio_img" src="/static/assests/images/portrait1.webp" id="portrait" alt="">
+                    </div>
+    
+                    <div class="portfolio_img_card">
+                        <img class="portfolio_img" id="fashion" src="/static/assests/images/fashion1.webp" alt="">
+                    </div>
+    
+                    <div class="portfolio_img_card grid_col_span_2">
+                        <img class="portfolio_img" id="travel" src="/static/assests/images/product1.webp" alt="">
+                    </div>
+                    
+                    <div class="portfolio_img_card grid_col_span_2">
+                        <img class="portfolio_img" id="product" src="/static/assests/images/product1.webp" alt="">
+                    </div>
+                </div>
+            </section>
+    
+            <section class="area testimonial_section" id="section--5">
+                <div class="testimonial_section_text_area">
+                    <p class="testimonial_section_sub_title sub_title">
+                        Testimonials
+                    </p>
+                    <h1 class="testimonial_section_title">
+                        Hear from our clients
+                    </h1>
+                </div>
+    
+                <div class="testimonial_cards_area">
+    
+                    <div class="testimonial_card">
+                        <div class="testimonial_profile">
+                            <!-- <img src="./assests/images/fashion1.webp" class="testimonial_img" alt=""> -->
+                            <div class="testimonial_info">
+                                <h1 class="testimonial_name">
+                                    Konistha Sarkar
+                                </h1>
+                                <p class="testimonial_title">
+                                    Client
+                                </p>
+                            </div>
+                        </div>
+                        <div class="line"></div>
+                        <div class="testimonial_review_area">
+                            <h1 class="testimonial_review_title">
+                                Working with the team was an absolute delight!
+                            </h1>
+                            <p class="testimonial_review">
+                                From capturing the vibrant energy of the event to highlighting the enthusiasm of participants, their work exceeded all expectations. The attention to detail and creativity showcased in every shot truly made the memories unforgettable. Thank you,  for beautifully encapsulating the essence of our Fest. We can't wait to relive the moments again and again through your amazing work!
+                            </p>
+                        </div>
+                    </div>
+    
+                    <div class="testimonial_card">
+                        <div class="testimonial_profile">
+                            <!-- <img src="./assests/images/fashion1.webp" class="testimonial_img" alt=""> -->
+                            <div class="testimonial_info">
+                                <h1 class="testimonial_name">
+                                    Vishal Nath
+                                </h1>
+                                <p class="testimonial_title">
+                                    Client
+                                </p>
+                            </div>
+                        </div>
+                        <div class="line"></div>
+                        <div class="testimonial_review_area">
+                            <h1 class="testimonial_review_title">
+                               We absolutely loved working with the aftermovie team!
+                            </h1>
+                            <p class="testimonial_review">
+                                Their creativity, dedication, and professionalism truly shone through the entire event.Their creativity and professionalism make the entire process enjoyable. We can't wait for our next project together! 
+                            </p>
+                        </div>
+                    </div>
+    
+                    <div class="testimonial_card">
+                        <div class="testimonial_profile">
+                            <!-- <img src="./assests/images/fashion1.webp" class="testimonial_img" alt=""> -->
+                            <div class="testimonial_info">
+                                <h1 class="testimonial_name">
+                                    Parizat Priyam 
+                                </h1>
+                                <p class="testimonial_title">
+                                    Singer
+                                </p>
+                            </div>
+                        </div>
+                        <div class="line"></div>
+                        <div class="testimonial_review_area">
+                            <h1 class="testimonial_review_title">
+                               They really got my best angles
+                            </h1>
+                            <p class="testimonial_review">
+                                It was great working with you Rana. You really got my best angles. Thank you for making me feel so comfortable in front of the camera. It was such a great experience with you
+                            </p>
+                        </div>
+                    </div>
+    
+                    <div class="testimonial_card">
+                        <div class="testimonial_profile">
+                            <!-- <img src="./assests/images/fashion1.webp" class="testimonial_img" alt=""> -->
+                            <div class="testimonial_info">
+                                <h1 class="testimonial_name">
+                                    Joyshree Chakraborty
+                                </h1>
+                                <p class="testimonial_title">
+                                    Model
+                                </p>
+                            </div>
+                        </div>
+                        <div class="line"></div>
+                        <div class="testimonial_review_area">
+                            <h1 class="testimonial_review_title">
+                                A Heartfelt Thank You to a Talented Photographer
+                            </h1>
+                            <p class="testimonial_review">
+                                I was just going through the pics you clicked and omg they are just mesmerizing😍 I wanted the pics to have a proper vintage feel and you made it possible. From the shots to the edits you did an outstanding job... Thank you soo much. Really loved working with you and looking forward to work again🌸
+                            </p>
+                        </div>
+                    </div>
+    
+                    <div class="testimonial_card">
+                        <div class="testimonial_profile">
+                            <!-- <img src="./assests/images/fashion1.webp" class="testimonial_img" alt=""> -->
+                            <div class="testimonial_info">
+                                <h1 class="testimonial_name">
+                                    Manushree
+                                </h1>
+                                <p class="testimonial_title">
+                                    Spokesperson, TUSSC 2023-24
+                                </p>
+                            </div>
+                        </div>
+                        <div class="line"></div>
+                        <div class="testimonial_review_area">
+                            <h1 class="testimonial_review_title">
+                                Through Rana's Lens & Populate Pixels Deliver Exceptional After Movie Experience
+                            </h1>
+                            <p class="testimonial_review">
+                                It has been a pleasure collaborating with Through Rana's Lens &  Populate Pixels for our after movie. During the initial meeting itself, it was evident that the team is not only incredibly hard-working but also exceptionally well-organized. What truly impressed us was the level of preparedness they demonstrated, presenting us with a meticulously crafted script during our first encounter. This attention to detail and proactive approach set the tone for the entire collaboration, instilling confidence in their ability to execute our vision flawlessly. Their passion for their craft shines through in every aspect of their work. We are grateful for the opportunity to work with such a talented team and eagerly look forward to the exciting outcome.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="contact_section" id="section-6">
+                <div class="contact_section_area">
+                    <div class="contact_section_info">
+                        <div class="contact_info_text">
+                            <h1 class="contact_section_title">
+                                Lets Connect
+                            </h1>
+                            <p class="contact_section_desc">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit eius consequatur tempore magnam ex <br> laboriosam molestiae nemo voluptates nesciunt voluptas!
+                            </p>
+                            <div class="contact_info_area">
+                                <a href="mailto:medhirana9@gmail.com" class="contact_info_gmail contact">
+                                    <i class="ri-mail-line contact_icon"></i>
+                                    medhirana9@gmail.com
+                                </a>
+                                <a href="#" class="contact_info_phone contact">
+                                    <i class="ri-phone-line contact_icon"></i>
+                                    +91 6003118499
+                                </a>
+                            </div>
+                            <div class="contact_cta_btn btn">
+                                <a class="contact_btn" href="#">
+                                    Book Appointment
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact_section_img_area">
+                        <img src="/static/assests/images/travel2.webp" alt="" class="contact_section_img">
+                        <div class="img_overlay"></div>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="area insta_section section" id="section--7">
+                    <div class="insta_section_text_area">
+                        <p class="insta_section_sub_title sub_title">
+                            Instagram
+                        </p>
+                        <h1 class="insta_section_title">
+                            Follow us on Instagram
+                        </h1>
+                    </div>
+    
+                    <div class="insta_cards_area">
+                        <a href="#" class="insta_card">
+                            <div class="insta_profile_info_area">
+                                <img class="insta_profile_pic" src="/static/assests/images/founder_img.webp" alt=""></img>
+                                <div class="insta_profile_info">
+                                    <h1 class="insta_username">
+                                        rana_photograph
+                                    </h1>
+                                    <p class="insta_post_date">
+                                        July 2023
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="insta_img_area">
+                                <img class="insta_img" src="/static/assests/images/Hero_image.webp" alt="">
+                                <p class="insta_btn_link_text">
+                                    Visit now <i class="ri-arrow-right-up-line"></i>
+                                </p>
+                            </div>
+                            <div class="insta_like_comment_area">
+                                <div class="likes_area interaction_count">
+                                    <i class="ri-heart-3-line interaction_icon"></i>
+                                    <p class="like_count count_text">20.5k</p>
+                                </div>
+                                <div class="comment_area interaction_count">
+                                    <i class="ri-chat-3-line interaction_icon"></i>
+                                    <p class="comment_count count_text">500</p>
+                                </div>
+                            </div>
+                        </a>
+    
+                        <a href="#" class="insta_card">
+                            <div class="insta_profile_info_area">
+                                <img class="insta_profile_pic" src="/static/assests/images/founder_img.webp" alt=""></img>
+                                <div class="insta_profile_info">
+                                    <h1 class="insta_username">
+                                        rana_photograph
+                                    </h1>
+                                    <p class="insta_post_date">
+                                        July 2023
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="insta_img_area">
+                                <img class="insta_img" src="/static/assests/images/concert1.webp" alt="">
+                                <p class="insta_btn_link_text">
+                                    Visit now <i class="ri-arrow-right-up-line"></i>
+                                </p>
+                            </div>
+                            <div class="insta_like_comment_area">
+                                <div class="likes_area interaction_count">
+                                    <i class="ri-heart-3-line interaction_icon"></i>
+                                    <p class="like_count count_text">125.5k</p>
+                                </div>
+                                <div class="comment_area interaction_count">
+                                    <i class="ri-chat-3-line interaction_icon"></i>
+                                    <p class="comment_count count_text">3k</p>
+                                </div>
+                            </div>
+                        </a>
+    
+                        <a href="#" class="insta_card">
+                            <div class="insta_profile_info_area">
+                                <img class="insta_profile_pic" src="/static/assests/images/founder_img.webp" alt=""></img>
+                                <div class="insta_profile_info">
+                                    <h1 class="insta_username">
+                                        rana_photograph
+                                    </h1>
+                                    <p class="insta_post_date">
+                                        April 2024
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="insta_img_area">
+                                <img class="insta_img" src="/static/assests/images/product1.webp" alt="">
+                                <p class="insta_btn_link_text">
+                                    Visit now <i class="ri-arrow-right-up-line"></i>
+                                </p>
+                            </div>
+                            <div class="insta_like_comment_area">
+                                <div class="likes_area interaction_count">
+                                    <i class="ri-heart-3-line interaction_icon"></i>
+                                    <p class="like_count count_text">35.5k</p>
+                                </div>
+                                <div class="comment_area interaction_count">
+                                    <i class="ri-chat-3-line interaction_icon"></i>
+                                    <p class="comment_count count_text">1.2k</p>
+                                </div>
+                            </div>
+                        </a>
+    
+                        <a href="#" class="insta_card">
+                            <div class="insta_profile_info_area">
+                                <img class="insta_profile_pic" src="/static/assests/images/founder_img.webp" alt=""></img>
+                                <div class="insta_profile_info">
+                                    <h1 class="insta_username">
+                                        rana_photograph
+                                    </h1>
+                                    <p class="insta_post_date">
+                                        December 2023
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="insta_img_area">
+                                <img class="insta_img" src="/static/assests/images/wedding1.webp" alt="">
+                                <p class="insta_btn_link_text">
+                                    Visit now <i class="ri-arrow-right-up-line"></i>
+                                </p>
+                            </div>
+                            <div class="insta_like_comment_area">
+                                <div class="likes_area interaction_count">
+                                    <i class="ri-heart-3-line interaction_icon"></i>
+                                    <p class="like_count count_text">20.5k</p>
+                                </div>
+                                <div class="comment_area interaction_count">
+                                    <i class="ri-chat-3-line interaction_icon"></i>
+                                    <p class="comment_count count_text">200</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+            </section>
+    
+        </main>
+    </div>
+
+    <footer class="footer_area">
+        <div class="copyright_text">
+        <p>&copy; All right Reserved by Through Rana’s Lens</p>
+        </div>
+        <div class="social_container">
+            <a href="#" class="footer_social_link"><i class="ri-facebook-circle-fill social_icons"></i></a>
+            <a href="#" class="footer_social_link"><i class="ri-instagram-line social_icons"></i></a>
+            <a href="#" class="footer_social_link"><i class="ri-twitter-x-fill social_icons"></i></a>
+        </div>
+    </footer>
+    
+    <!-- NAVIGATION JS FILE -->
+    <script src="/static/js/nav.js" defer></script>
+    <script src="/static/js/index.js"></script>
+</body>
+
+</html>

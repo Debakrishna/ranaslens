@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>404 Page not found | Through Rana's Lens</title>
+
+    <!-- REMIXICON CDN LINK -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- CUSTOM CSS FILE -->
+    <link rel="stylesheet" href="/static/styles/error.css" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,500;1,500&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="main_body">
+      <div class="loading_screen">
+        <lottie-player
+          src="https://lottie.host/a538c93b-7912-4d1d-9c54-10e98d6df172/xD4VBErGal.json"
+          background="#ffffff"
+          speed="1"
+          style="width: 300px; height: 300px"
+          loop
+          autoplay
+          direction="1"
+          mode="normal"
+        ></lottie-player>
+      </div>
+      <header class="hero_container">
+        <!-- Navigation Area -->
+        {% include 'base/navbar.html' %}
+        <!-- Navigation Area End -->
+        <div class="error_text_container">
+          <div class="text_area">
+            <h1 class="subtitle">404</h1>
+            <h2 class="title">Page Not Found</h2>
+            <p class="description">
+              Its looks like the page that you are looking for is no longer
+              available.
+            </p>
+            <a href="{% url 'home' %}" class="btn">Go Home</a>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <footer class="footer_area">
+      <div class="copyright_text">
+        <p>&copy; All right Reserved by Through Rana’s Lens</p>
+      </div>
+      <div class="social_container">
+        <a href="#" class="footer_social_link"
+          ><i class="ri-facebook-circle-fill social_icons"></i
+        ></a>
+        <a href="#" class="footer_social_link"
+          ><i class="ri-instagram-line social_icons"></i
+        ></a>
+        <a href="#" class="footer_social_link"
+          ><i class="ri-twitter-x-fill social_icons"></i
+        ></a>
+      </div>
+    </footer>
+  </body>
+  <script src="/static/js/nav.js" defer></script>
+  <script src="/static/js/index.js"></script>
+</html>

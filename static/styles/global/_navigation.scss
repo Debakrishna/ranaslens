@@ -1,0 +1,246 @@
+@import "./responsive";
+
+//? VARIABLE for hamberger
+$animation_timing: 200ms ease-in-out;
+$bar_height: 0.15rem;
+$bar_width: 1.5rem;
+$bar_gap: 0.3rem;
+$hamberger_height: calc(($bar_height * 3) + ($bar_gap) * 2);
+$x_width: calc($hamberger_height * 1.41421356237);
+
+nav.nav_container {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: $color_white;
+    padding: 1rem 4rem;
+    z-index: 9999;
+    border-bottom: 1px solid $dark25;
+
+    .hamberger {
+        display: flex;
+        flex-direction: column;
+        gap: $bar_gap;
+        width: max-content;
+        cursor: pointer;
+
+        input {
+            appearance: none;
+            padding: 0;
+            margin: 0;
+            outline: none;
+            pointer-events: none;
+
+            &:checked {
+                opacity: 0;
+                width: 0;
+            }
+        }
+    }
+
+    .hamberger::before,
+    .hamberger::after,
+    .hamberger input {
+        content: "";
+        width: $bar_width;
+        height: $bar_height;
+        transform-origin: left center;
+        background: $dark100;
+        border-radius: 1rem;
+        transition: all $animation_timing;
+    }
+
+    .hamberger:has(input:checked)::before {
+        rotate: 45deg;
+        width: $x_width;
+        translate: 0 calc($bar_height / -2);
+        transition: all $animation_timing;
+    }
+
+    .hamberger:has(input:checked)::after {
+        rotate: -45deg;
+        width: $x_width;
+        translate: 0 calc($bar_height / 2);
+        transition: all $animation_timing;
+    }
+
+    .logo_container .logo {
+        height: 40px;
+    }
+
+    .social_container {
+        i.social_icons {
+            padding: 0.5rem;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 100%;
+
+            &:hover {
+                background: $color_primary_light;
+            }
+        }
+    }
+}
+
+//? NAVIGATION LINKS CONTAINER STYLING
+.nav_link_container {
+    position: relative;
+    z-index: 9000;
+
+    ul.nav_links {
+        position: fixed;
+        background: $color_white;
+        height: 0%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3em;
+        overflow: hidden;
+        transition: all 0.2s ease-in-out;
+
+        .link_area {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3em;
+        }
+
+        .links {
+            font-family: $heading_font;
+            font-size: $heading_3;
+            font-weight: $bold;
+            opacity: 0;
+            transform: translateY(10px);
+
+            &:nth-child(1) {
+                transition: all 0.3s ease 0.2s;
+            }
+
+            &:nth-child(2) {
+                transition: all 0.3s ease 0.4s;
+            }
+
+            &:nth-child(3) {
+                transition: all 0.3s ease 0.6s;
+            }
+
+            &:nth-child(4) {
+                transition: all 0.3s ease 0.8s;
+            }
+
+            &.fade {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+
+            a.link {
+                color: $dark100;
+                transition: all 0.2s ease-in-out;
+
+                &.active {
+                    color: $color_primary;
+                }
+
+                &:hover {
+                    color: $color_primary;
+                }
+            }
+        }
+
+        .social_container_2 {
+            display: none;
+
+            .social_icons_2 {
+                padding: 0.5rem;
+                font-size: 18px;
+                border-radius: 100%;
+                opacity: 0;
+                transition: all 0.2s ease 0s;
+
+                &:nth-child(1) {
+                    transition: all 0.3s ease 1s;
+                }
+
+                &:nth-child(2) {
+                    transition: all 0.3s ease 1.2s;
+                }
+
+                &:nth-child(3) {
+                    transition: all 0.3s ease 1.4s;
+                }
+
+                &.fade_icons {
+                    opacity: 1;
+                }
+
+                &:hover {
+                    background: $color_primary_light;
+                    transition: all 0.2s ease 0s;
+                }
+            }
+        }
+    }
+
+    ul.show {
+        height: 100%;
+        transition: all $animation_timing;
+        pointer-events: all;
+    }
+}
+
+//? RESPONSIVE STYLING -----------------------------------------
+
+@include tablet {
+    nav.nav_container {
+        padding: 1rem 4rem;
+    }
+
+    .social_container {
+        display: none;
+    }
+
+    .nav_link_container {
+        ul.nav_links {
+            padding: 0em 4rem;
+            align-items: flex-start;
+
+            .link_area {
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+            }
+
+            #social_container_2 {
+                display: initial;
+            }
+        }
+
+        ul.show {
+            height: 100%;
+        }
+    }
+}
+
+@include mobile {
+    nav.nav_container {
+        padding: 1rem 1rem;
+
+        .logo_container .logo {
+            height: 35px;
+        }
+    }
+
+    .nav_link_container {
+        ul.nav_links {
+            padding: 0em 1rem;
+
+            .link_area .links a {
+                font-size: $heading_4;
+            }
+        }
+    }
+}

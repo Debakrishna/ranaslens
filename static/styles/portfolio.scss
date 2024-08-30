@@ -1,0 +1,228 @@
+@import "./global/global";
+@import "./global/navigation";
+@import "./global/footer";
+@import "./global/responsive";
+
+// STYLE FILE GLOBAL SETTING
+.sub_title {
+    font-size: $paragraph;
+    font-family: $paragraph_font;
+    font-weight: 500;
+    color: $color_primary;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+header {
+    @include make_header();
+}
+
+//? MAIN BODY STYLING start --------------------------
+main {
+    section.section_hidden {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+
+    section.area {
+        transition: all 0.5s ease-in;
+    }
+
+    section.section {
+        margin: 8rem 4rem 0;
+
+        section:last-child {
+            margin-bottom: 8rem;
+        }
+    }
+
+    section.portfolio_section {
+        h1.portfolio_section_title {
+            font-size: $heading_3;
+        }
+
+        .gallery {
+            columns: 3 20rem;
+            margin-top: 2rem;
+            margin-bottom: 8rem;
+
+            .img_container {
+                height: 100%;
+                width: 100%;
+                overflow: hidden;
+                position: relative;
+                cursor: pointer;
+                margin-bottom: 0.8rem;
+
+                img.gallery_image {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: top;
+                    border-radius: $border_radius;
+                }
+            }
+        }
+    }
+}
+
+//? Light box Styling
+#lightBox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10000;
+    background: $dark75;
+    backdrop-filter: blur(20px);
+    display: none;
+    transition: all 0.4s ease-in-out;
+
+    .ld_img {
+        height: 600px;
+        object-fit: cover;
+        object-position: 50% 50%;
+        animation: show_image 0.5s ease-in-out forwards;
+    }
+}
+
+@keyframes show_image {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+#lightBox.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox_control {
+    position: fixed;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    z-index: 100001;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 0rem;
+    display: none;
+
+    .control_icon {
+        color: $color_white;
+        font-size: $heading_4;
+        cursor: pointer;
+    }
+
+    .close_btn {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .prev_next_btn {
+        display: flex;
+        gap: 4rem;
+    }
+}
+
+.lightbox_control.active_control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+//? MAIN BODY STYLING END
+
+//? RESPONSIVE STYLING
+@include tablet {
+    .hero_container {
+        .hero_text_container {
+            padding: 0 4rem;
+
+            .hero_title_text {
+                font-size: $heading_3;
+            }
+
+            .hero_body_text {
+                padding-right: 0.5rem;
+                width: 90%;
+            }
+        }
+    }
+
+    main section.section {
+        margin: 4rem 4rem 0; // top | left and right | bottom
+
+        &:last-child {
+            margin-bottom: 4rem;
+        }
+    }
+
+    section.portfolio_section {
+        .gallery {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    #lightBox {
+        .ld_img {
+            height: 500px;
+        }
+    }
+
+    .lightbox_control {
+        padding: 4rem 0rem;
+
+        .control_btn {
+            border-radius: 100%;
+        }
+    }
+}
+
+@include mobile {
+    .hero_container {
+        .hero_text_container {
+            padding: 0 1rem;
+
+            .hero_title_text {
+                font-size: $heading_4;
+            }
+
+            .hero_body_text {
+                width: 100%;
+            }
+        }
+    }
+
+    main section.section {
+        margin: 4rem 1rem 0;
+    }
+
+    section.fashion_pics {
+        .gallery {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    #lightBox {
+        .ld_img {
+            height: auto;
+            width: 90%;
+        }
+    }
+
+    .lightbox_control {
+        padding: 4rem 0rem;
+    }
+}

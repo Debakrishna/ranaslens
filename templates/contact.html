@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Through Rana's Lens - Contact Us</title>
+
+    <!-- REMIXICON CDN LINK -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- CUSTOM CSS FILE -->
+    <link rel="stylesheet" href="/static/styles/contact.css" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,500;1,500&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- LOTTIE SCRIPT -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  </head>
+
+  <body>
+    <div class="loading_screen">
+      <lottie-player
+        src="https://lottie.host/a538c93b-7912-4d1d-9c54-10e98d6df172/xD4VBErGal.json"
+        background="#ffffff"
+        speed="1"
+        style="width: 300px; height: 300px"
+        loop
+        autoplay
+        direction="1"
+        mode="normal"
+      ></lottie-player>
+    </div>
+    <div class="main_body">
+      <header class="hero_container">
+        <img src="/static/assests/images/Hero_image.webp" class="hero_image" alt="" />
+        <!-- Navigation Area -->
+        {% include 'base/navbar.html' %}
+        <!-- Navigation Area End -->
+        <div class="hero_text_container">
+          <h1 class="hero_title_text">
+            Let's create <br />
+            your timeless<br />
+            memories together!
+          </h1>
+          <p class="hero_body_text">
+            Through Rana's Lens photography and video production company
+            specialize in fashion, weddings, concerts & portraits.
+          </p>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="area contact_section section" id="section--1">
+          <div class="contact_section_left">
+            <p class="sub_title contact_section_sub_title">Contact Us</p>
+            <div class="contact_information">
+              <div class="contact_email_info contact_info_box">
+                <p class="email_id contact_title">My email</p>
+                <a href="#" class="contact_info">medhirana9@gmail.com</a>
+              </div>
+              <div class="contact_phone_info contact_info_box">
+                <p class="email_id contact_title">Contact No.</p>
+                <a href="#" class="contact_info">+91 6003118499</a>
+              </div>
+              <div class="contact_social_info contact_info_box">
+                <p class="social_media_title contact_title">Social Media</p>
+                <div class="contact_section_social_icons">
+                  <a href="#"
+                    ><i class="ri-instagram-line contact_icons"></i
+                  ></a>
+                  <a href="#"
+                    ><i class="ri-facebook-circle-fill contact_icons"></i
+                  ></a>
+                  <a href="#"
+                    ><i class="ri-twitter-x-fill contact_icons"></i
+                  ></a>
+                  <a href="#"
+                    ><i class="ri-pinterest-fill contact_icons"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="contact_section_right">
+            <h1 class="contact_section_title">
+              Ready to Capture Your Moments?
+            </h1>
+            <p class="contact_section_desc">
+              Take the first step towards preserving your precious moments
+              forever. Fill out the form below and let Through Rana's Lens
+              capture your story in breathtaking detail.
+            </p>
+            <!-- {% if messages %}
+              <ul class="messages">
+                {% for message in messages %}
+                  <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+              </ul>
+            {% endif %} -->
+            <ul class="message">
+              <li>success</li>
+            </ul>
+            <form
+              action="{% url 'contact' %}"
+              class="contact_form"
+              method="post"
+              name="contact_form"
+              id="contact_form"
+              autocomplete="on"
+            >
+            {% csrf_token %}
+              <div class="contact_name contact_input_area">
+                <div class="contact_input_box">
+                  <label for="first_name" class="contact_label label_first_name"
+                    >First Name</label
+                  >
+                  <input
+                    type="text"
+                    class="contact_input input_first_name"
+                    id="first_name"
+                    name="first_name"
+                    placeholder="First Name"
+                    required
+                  />
+                </div>
+                <div class="contact_input_box">
+                  <label for="last_name" class="contact_label label_last_name"
+                    >Last Name</label
+                  >
+                  <input
+                    type="text"
+                    class="contact_input input_last_name"
+                    id="last_name"
+                    name="last_name"
+                    placeholder="Last Name"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="contact_email contact_input_area">
+                <div class="contact_input_box">
+                  <label for="email_id" class="contact_label label_email">
+                    Email ID
+                  </label>
+                  <input
+                    type="email"
+                    class="contact_input input_email"
+                    id="email_id"
+                    name="email_id"
+                    placeholder="user@email.com"
+                    required
+                  />
+                </div>
+                <div class="contact_input_box">
+                  <label for="phone_no" class="contact_label label_phone">
+                    Phone No.
+                  </label>
+                  <input
+                    type="text"
+                    class="contact_input input_phone"
+                    id="phone_no"
+                    name="phone_no"
+                    placeholder="Phone no."
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="contact_select contact_input_area">
+                <div class="contact_input_box">
+                  <label for="services" class="contact_label label_services">
+                    Select Service
+                  </label>
+                  <select
+                    name="services"
+                    id="services"
+                    class="select_contact_input input_services"
+                    required
+                  >
+                  {% for value, label in service_choice %}
+                  <option value="{{ value }}">{{ label }}</option>
+                  {% endfor %}
+                  </select>
+                </div>
+                <div class="contact_input_box">
+                  <label for="found_us" class="contact_label label_found_us">
+                    From where you heard about us
+                  </label>
+                  <select
+                    name="found_us"
+                    id="found_us"
+                    class="select_contact_input input_found_us"
+                  >
+                  {% for value, label in reference_choice %}
+                  <option value="{{ value }}">{{ label }}</option>
+                  {% endfor %}
+                  </select>
+                </div>
+              </div>
+
+              <div class="contact_message contact_input_area">
+                <div class="contact_input_box">
+                  <label for="message" class="contact_label label_message"
+                    >Any extra information that you want us to know</label
+                  >
+                  <textarea
+                    name="message"
+                    id="message"
+                    class="contact_input input_message"
+                    placeholder="Your message here"
+                    required
+                  ></textarea>
+                </div>
+              </div>
+
+              <button type="submit" class="contact_form_submit_btn">
+                Submit
+              </button>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="footer_area">
+      <div class="copyright_text">
+        <p>&copy; All right Reserved by Through Rana's Lens</p>
+      </div>
+      <div class="social_container">
+        <a href="#" class="footer_social_link"
+          ><i class="ri-facebook-circle-fill social_icons"></i
+        ></a>
+        <a href="#" class="footer_social_link"
+          ><i class="ri-instagram-line social_icons"></i
+        ></a>
+        <a href="#" class="footer_social_link"
+          ><i class="ri-twitter-x-fill social_icons"></i
+        ></a>
+      </div>
+    </footer>
+  </body>
+  <!-- JS FILES -->
+  <script src="/static/js/nav.js" defer></script>
+  <script src="/static/js/contact.js" defer></script>
+  <script src="/static/js/index.js"></script>
+</html>

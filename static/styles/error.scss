@@ -1,0 +1,47 @@
+@import "./global/global";
+@import "./global/navigation";
+@import "./global/footer";
+@import "./global/responsive";
+
+header {
+    .error_text_container {
+        display: grid;
+        place-items: center;
+        height: 100vh;
+        padding: 1rem;
+
+        .text_area {
+            text-align: center;
+            h1.subtitle {
+                font-size: $heading_1;
+                color: $color_error;
+            }
+
+            h2.title {
+                font-size: $heading_3;
+            }
+
+            p.description {
+                margin-bottom: 3rem;
+            }
+
+            .btn {
+                @include make_button($color_primary, $color_white, $color_primary_light, $color_primary);
+            }
+        }
+    }
+}
+
+@include mobile {
+    header.hero_container {
+        .error_text_container {
+            .text_area {
+                text-align: left;
+                h2.title {
+                    margin-top: 1rem;
+                    font-size: $heading_4;
+                }
+            }
+        }
+    }
+}

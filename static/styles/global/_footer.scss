@@ -1,0 +1,37 @@
+@import "./global";
+
+footer.footer_area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $dark5;
+    padding: 1.5rem 4rem;
+
+    .social_container {
+        display: flex;
+        gap: 0.5rem;
+        a.footer_social_link {
+            i.social_icons {
+                padding: 0.5rem;
+                cursor: pointer;
+                font-size: 18px;
+                border-radius: 100%;
+                color: $dark100;
+
+                &:hover {
+                    background: $color_primary_light;
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    footer.footer_area {
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem 1rem;
+        gap: 1rem;
+    }
+}

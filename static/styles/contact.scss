@@ -1,0 +1,260 @@
+@import "./global/global";
+@import "./global/navigation";
+@import "./global/footer";
+@import "./global/responsive";
+
+// STYLE FILE GLOBAL SETTING
+.sub_title {
+    font-size: $paragraph;
+    font-family: $paragraph_font;
+    font-weight: 500;
+    color: $color_primary;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.message li{
+    color:green;
+}
+
+header {
+    @include make_header();
+    height: 80vh;
+}
+
+main {
+    section.section_hidden {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+
+    section.area {
+        transition: all 0.5s ease-in;
+    }
+
+    section.section {
+        margin: 8rem 4rem 0; // top | left and right | bottom
+
+        &:last-child {
+            margin-bottom: 8rem;
+        }
+    }
+
+    section.contact_section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+
+        .contact_section_left {
+            .contact_info_box {
+                margin-bottom: 1rem;
+
+                .contact_title,
+                .contact_info {
+                    font-family: $paragraph_font;
+                    font-size: $paragraph;
+                    margin-bottom: 0.4rem;
+                    // font-weight: $bold;
+                }
+
+                .contact_info {
+                    border-bottom: 1px dashed rgb(255, 0, 208);
+                }
+
+                .social_media_title {
+                    margin-bottom: 1rem;
+                }
+            }
+
+            .contact_social_info {
+                .contact_section_social_icons {
+                    display: flex;
+                    gap: 1rem;
+
+                    .contact_icons {
+                        padding: 0.5rem;
+                        background: $dark100;
+                        border-radius: 100%;
+                        font-size: 18px;
+                        color: $color_white;
+                        transition: background 0.2s ease-in-out;
+
+                        &:hover {
+                            background: $color_primary;
+                        }
+                    }
+                }
+            }
+        }
+
+        .contact_section_right {
+            grid-column: span 2;
+
+            h1.contact_section_title {
+                font-size: $heading_3;
+                margin-bottom: 1rem;
+            }
+
+            form.contact_form {
+                margin-top: 2rem;
+
+                .contact_input_area {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 1rem;
+                    margin-bottom: 1rem;
+
+                    .contact_input_box {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: flex-start;
+                        gap: 0.5rem;
+                        width: 100%;
+
+                        label.contact_label {
+                            font-family: $paragraph_font;
+                            font-size: $paragraph;
+                        }
+
+                        input.contact_input,
+                        select.select_contact_input,
+                        textarea.input_message {
+                            padding: 0.5rem 1rem;
+                            width: 100%;
+                            outline: none;
+                            border: 1px solid $dark25;
+                            border-radius: $border_radius;
+                            font-family: $paragraph_font;
+                            font-size: $paragraph;
+                            transition: border 0.2s ease-in-out;
+
+                            &:active,
+                            &:focus {
+                                border: 1px solid $dark75;
+                            }
+                        }
+
+                        textarea.input_message {
+                            min-width: 100%;
+                            max-width: 100%;
+                            min-height: 20vh;
+                        }
+                    }
+                }
+
+                button.contact_form_submit_btn {
+                    margin-top: 1rem;
+                    @include make_button($color_primary, $color_white, $color_primary_light, $color_primary);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .messages{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background-color: $color_primary_light;
+        padding: 1rem;
+        
+    }
+}
+
+@include tablet {
+    .hero_container {
+        .hero_text_container {
+            padding: 0 4rem;
+
+            .hero_title_text {
+                font-size: $heading_3;
+            }
+
+            .hero_body_text {
+                padding-right: 0.5rem;
+                width: 90%;
+            }
+        }
+    }
+
+    main section.section {
+        margin: 4rem 4rem 0; // top | left and right | bottom
+
+        &:last-child {
+            margin-bottom: 4rem;
+        }
+    }
+
+    main section.contact_section {
+        grid-template-columns: repeat(1, 1fr);
+
+        .contact_section_right {
+            h1.contact_section_title {
+                line-height: 3.5rem;
+            }
+
+            form.contact_form {
+                .contact_select {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 780px) {
+    main section.contact_section {
+        grid-template-columns: repeat(1, 1fr);
+
+        .contact_section_right {
+            h1.contact_section_title {
+                line-height: 3.5rem;
+            }
+
+            form.contact_form {
+                .contact_select {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    .hero_container {
+        .hero_text_container {
+            padding: 0 1rem;
+
+            .hero_title_text {
+                font-size: $heading_4;
+            }
+
+            .hero_body_text {
+                width: 100%;
+            }
+        }
+    }
+
+    main section.section {
+        margin: 4rem 1rem 0;
+    }
+
+    main section.contact_section {
+        grid-template-columns: repeat(1, 1fr);
+
+        .contact_section_right {
+            h1.contact_section_title {
+                font-size: $heading_4;
+                line-height: 3rem;
+            }
+
+            form.contact_form {
+                .contact_input_area {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}
